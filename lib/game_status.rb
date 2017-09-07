@@ -66,3 +66,13 @@ def draw?(board)
     return false
   end
 end
+
+#over method
+def over?(board)
+  if won?(board) == true || draw?(board) == true
+    return true
+  elsif full?(board) == false
+    return false
+  end
+end
+  
