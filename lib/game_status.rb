@@ -41,5 +41,4 @@ def won?(board)
   else
     return winning_combination
   end
-
 end
