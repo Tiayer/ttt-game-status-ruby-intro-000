@@ -60,7 +60,7 @@ end
 
 #draw method
 def draw?(board)
-  if full?(board) == true && winning combination == []
+  if full?(board) == true && winning_combination == []
     return true
   else
     return false
