@@ -22,4 +22,3 @@ def won?(board)
     board_index == nil || board_index == " "
   end
 end
-    
