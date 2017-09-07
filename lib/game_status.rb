@@ -24,7 +24,7 @@ def won?(board)
 
   if empty_board
     return false
-  elsif empty_board == false && winning_combination == []
+  elsif !empty_board && winning_combination == []
     return false
   else
     return winning_combination
