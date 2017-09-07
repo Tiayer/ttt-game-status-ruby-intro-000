@@ -69,9 +69,14 @@ end
 
 #over method
 def over?(board)
-if won?(board) == true || draw?(board) == true
-  return true
-else
-  return false
-end
-end
+ if won?(board) && full?(board) == true
+   return true
+ elsif won?(board) && full?(board) == false
+     return true
+   elsif draw?(board) == true
+     return true
+   else 
+     return false
+   end
+ end
+     
