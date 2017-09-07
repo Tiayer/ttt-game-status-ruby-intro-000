@@ -23,6 +23,10 @@ def won?(board)
   end
   if empty_board
     return false
+  elsif empty_board == false && winning_combination == []
+    return false
+  else
+    return winning_combination
   end
 
   winning_combination = WIN_COMBINATIONS.select? do |win_combination|
