@@ -57,3 +57,12 @@ def full?(board)
     return false
   end
 end
+
+#draw method
+def draw?(board)
+  if full?(board) == true && winning combination == []
+    return true
+  else
+    false
+  end
+  
