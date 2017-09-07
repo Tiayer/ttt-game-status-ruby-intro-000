@@ -21,6 +21,7 @@ def won?(board)
   empty_board = board.all? do |board_index|
     board_index == nil || board_index == " "
   end
+  
   if empty_board
     return false
   elsif empty_board == false && winning_combination == []
@@ -29,7 +30,7 @@ def won?(board)
     return winning_combination
   end
 
-  winning_combination = WIN_COMBINATIONS.select? do |win_combination|
+  winning_combination = WIN_COMBINATIONS.select do |win_combination|
     win_index_1 = win_combination[0]
     win_index_2 = win_combination[1]
     win_index_3 = win_combination[2]
