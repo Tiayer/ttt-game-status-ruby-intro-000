@@ -42,3 +42,18 @@ def won?(board)
     return winning_combination
   end
 end
+
+#full method
+def full?(board)
+  full_board = board.all? do |board_index|
+    board_index == "X" || board_index == "O"
+  end
+  incomplete_board = board.all? do |board_index|
+    board_index == "X" || board_index == "O" || board_index = ""
+  end
+  if full_board
+    return true
+  elsif incomplete_board
+    return false
+  end
+end
