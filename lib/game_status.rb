@@ -24,5 +24,5 @@ def won?(board)
   if empty_board
     return false
   end
-    
+
 end
