@@ -63,6 +63,6 @@ def draw?(board)
   if full?(board) == true && winning combination == []
     return true
   else
-    false
+    return false
   end
 end
