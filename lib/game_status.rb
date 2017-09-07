@@ -21,4 +21,8 @@ def won?(board)
   empty_board = board.all? do |board_index|
     board_index == nil || board_index == " "
   end
+  if empty_board
+    return false
+  end
+    
 end
