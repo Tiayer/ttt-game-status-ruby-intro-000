@@ -79,3 +79,11 @@ def over?(board)
      return false
    end
  end
+
+#winner method
+def winner(board)
+  if won?(board) == false
+    return nil
+  else board[won?(board)[0]]
+end
+end
