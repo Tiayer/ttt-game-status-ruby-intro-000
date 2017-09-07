@@ -18,18 +18,6 @@ WIN_COMBINATIONS = [
 #won? method
 def won?(board)
 
-  empty_board = board.all? do |board_index|
-    board_index == nil || board_index == " "
-  end
-
-  if empty_board
-    return false
-  elsif !empty_board && winning_combination == []
-    return false
-  else
-    return winning_combination
-  end
-
   winning_combination = WIN_COMBINATIONS.select do |win_combination|
     win_index_1 = win_combination[0]
     win_index_2 = win_combination[1]
@@ -40,6 +28,18 @@ def won?(board)
     elsif board[win_index_1] == "O" && board[win_index_2] == "O" && board[win_index_3] == "O"
       return win_combination
     end
+  end
+
+  empty_board = board.all? do |board_index|
+    board_index == nil || board_index == " "
+  end
+
+  if empty_board
+    return false
+  elsif empty_board == false && winning_combination == []
+    return false
+  else
+    return winning_combination
   end
 
 end
